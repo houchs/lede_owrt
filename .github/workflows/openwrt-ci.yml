@@ -14,11 +14,11 @@ name: OpenWrt-CI
 on:
   repository_dispatch:
   workflow_dispatch:
-    inputs:
-      ssh:
-        description: 'SSH connection to Actions'
-        required: true
-        default: 'false'
+    #inputs:
+      #ssh:
+        #description: 'SSH connection to Actions'
+        #required: true
+        #default: 'false'
         
 permissions:
   contents: read
@@ -76,236 +76,181 @@ jobs:
           CONFIG_TARGET_x86=y
           CONFIG_TARGET_x86_64=y
           CONFIG_TARGET_x86_64_DEVICE_generic=y
-          CONFIG_ARIA2_BITTORRENT=y
-          CONFIG_ARIA2_NOXML=y
-          CONFIG_ARIA2_OPENSSL=y
-          CONFIG_ARIA2_WEBSOCKET=y
-          CONFIG_CGROUPFS_MOUNT_KERNEL_CGROUPS=y
-          CONFIG_DOCKER_CGROUP_OPTIONS=y
-          CONFIG_DOCKER_NET_MACVLAN=y
-          CONFIG_DOCKER_OPTIONAL_FEATURES=y
-          CONFIG_DOCKER_STO_EXT4=y
-          CONFIG_KERNEL_CFQ_GROUP_IOSCHED=y
-          CONFIG_KERNEL_CGROUP_DEVICE=y
-          CONFIG_KERNEL_CGROUP_FREEZER=y
-          CONFIG_KERNEL_CGROUP_HUGETLB=y
-          CONFIG_KERNEL_CGROUP_NET_PRIO=y
-          CONFIG_KERNEL_CGROUP_PERF=y
-          CONFIG_KERNEL_EXT4_FS_POSIX_ACL=y
-          CONFIG_KERNEL_EXT4_FS_SECURITY=y
-          CONFIG_KERNEL_FS_POSIX_ACL=y
-          CONFIG_KERNEL_HUGETLBFS=y
-          CONFIG_KERNEL_HUGETLB_PAGE=y
-          CONFIG_KERNEL_MEMCG_SWAP_ENABLED=y
-          CONFIG_KERNEL_NET_CLS_CGROUP=y
-          CONFIG_KERNEL_PERF_EVENTS=y
-          CONFIG_KERNEL_TRANSPARENT_HUGEPAGE=y
-          CONFIG_KERNEL_TRANSPARENT_HUGEPAGE_ALWAYS=y
-          CONFIG_MAKE_TOOLCHAIN=y
           CONFIG_MUTT_IMAP=y
           CONFIG_MUTT_OPENSSL=y
           CONFIG_MUTT_POP=y
-          CONFIG_OPENVPN_openssl_ENABLE_DEF_AUTH=y
-          CONFIG_OPENVPN_openssl_ENABLE_FRAGMENT=y
-          CONFIG_OPENVPN_openssl_ENABLE_LZ4=y
-          CONFIG_OPENVPN_openssl_ENABLE_LZO=y
-          CONFIG_OPENVPN_openssl_ENABLE_MULTIHOME=y
-          CONFIG_OPENVPN_openssl_ENABLE_PF=y
-          CONFIG_OPENVPN_openssl_ENABLE_PORT_SHARE=y
-          CONFIG_OPENVPN_openssl_ENABLE_SMALL=y
-          CONFIG_PACKAGE_acme=m
-          CONFIG_PACKAGE_adblock=m
-          CONFIG_PACKAGE_ahcpd=m
-          CONFIG_PACKAGE_aliyundrive-fuse=y
-          CONFIG_PACKAGE_aliyundrive-webdav=y
-          CONFIG_PACKAGE_alsa-lib=m
-          CONFIG_PACKAGE_alsa-ucm-conf=m
-          CONFIG_PACKAGE_alsa-utils=m
-          CONFIG_PACKAGE_amule=m
-          CONFIG_PACKAGE_aria2=m
-          CONFIG_PACKAGE_ariang=m
-          CONFIG_PACKAGE_boost=y
-          CONFIG_PACKAGE_boost-chrono=m
-          CONFIG_PACKAGE_boost-date_time=y
-          CONFIG_PACKAGE_boost-program_options=y
-          CONFIG_PACKAGE_boost-random=m
-          CONFIG_PACKAGE_boost-system=y
-          CONFIG_PACKAGE_btrfs-progs=y
-          CONFIG_PACKAGE_cgroupfs-mount=y
-          CONFIG_PACKAGE_confuse=m
-          CONFIG_PACKAGE_containerd=y
-          CONFIG_PACKAGE_coreutils-timeout=m
-          CONFIG_PACKAGE_docker=y
-          CONFIG_PACKAGE_dockerd=y
-          CONFIG_PACKAGE_fdisk=y
-          CONFIG_PACKAGE_fdk-aac=m
-          CONFIG_PACKAGE_frpc=m
-          CONFIG_PACKAGE_frps=m
-          CONFIG_PACKAGE_fuse-utils=y
-          CONFIG_PACKAGE_gowebdav=m
-          CONFIG_PACKAGE_ip6tables=y
-          CONFIG_PACKAGE_ipt2socks=y
-          CONFIG_PACKAGE_kmod-ac97=m
-          CONFIG_PACKAGE_kmod-br-netfilter=y
-          CONFIG_PACKAGE_kmod-dummy=y
-          CONFIG_PACKAGE_kmod-fs-btrfs=y
-          CONFIG_PACKAGE_kmod-fuse=y
-          CONFIG_PACKAGE_kmod-ip6tables=y
-          CONFIG_PACKAGE_kmod-ipt-nat6=y
-          CONFIG_PACKAGE_kmod-ipt-physdev=y
-          CONFIG_PACKAGE_kmod-ledtrig-audio=m
-          CONFIG_PACKAGE_kmod-lib-raid6=y
-          CONFIG_PACKAGE_kmod-lib-xor=y
-          CONFIG_PACKAGE_kmod-lib-zstd=y
-          CONFIG_PACKAGE_kmod-nf-ipt6=y
-          CONFIG_PACKAGE_kmod-nf-ipvs=y
-          CONFIG_PACKAGE_kmod-nf-log6=y
-          CONFIG_PACKAGE_kmod-nf-nat6=y
-          CONFIG_PACKAGE_kmod-nf-reject6=y
-          CONFIG_PACKAGE_kmod-regmap-core=m
-          CONFIG_PACKAGE_kmod-sound-core=m
-          CONFIG_PACKAGE_kmod-sound-hda-codec-hdmi=m
-          CONFIG_PACKAGE_kmod-sound-hda-codec-realtek=m
-          CONFIG_PACKAGE_kmod-sound-hda-codec-via=m
-          CONFIG_PACKAGE_kmod-sound-hda-core=m
-          CONFIG_PACKAGE_kmod-sound-hda-intel=m
-          CONFIG_PACKAGE_kmod-sound-i8x0=m
-          CONFIG_PACKAGE_kmod-sound-mpu401=m
-          CONFIG_PACKAGE_kmod-sound-via82xx=m
-          CONFIG_PACKAGE_kmod-usb-audio=m
-          CONFIG_PACKAGE_kmod-usb-printer=m
-          CONFIG_PACKAGE_kmod-veth=y
-          CONFIG_PACKAGE_lame-lib=m
-          CONFIG_PACKAGE_libao=m
-          CONFIG_PACKAGE_libavahi-compat-libdnssd=m
-          CONFIG_PACKAGE_libbfd=m
-          CONFIG_PACKAGE_libbz2=m
-          CONFIG_PACKAGE_libconfig=m
-          CONFIG_PACKAGE_libcryptopp=m
-          CONFIG_PACKAGE_libedit=m
-          CONFIG_PACKAGE_libevent2=m
-          CONFIG_PACKAGE_libffmpeg-full=m
-          CONFIG_PACKAGE_libfuse=y
-          CONFIG_PACKAGE_libgcrypt=m
-          CONFIG_PACKAGE_libgdbm=m
-          CONFIG_PACKAGE_libgpg-error=m
-          CONFIG_PACKAGE_libltdl=m
-          CONFIG_PACKAGE_liblzo=y
-          CONFIG_PACKAGE_libopus=m
-          CONFIG_PACKAGE_libpcre2-16=m
-          CONFIG_PACKAGE_libplist=m
-          CONFIG_PACKAGE_libpng=m
-          CONFIG_PACKAGE_libprotobuf-c=m
-          CONFIG_PACKAGE_libseccomp=y
-          CONFIG_PACKAGE_libsoxr=m
-          CONFIG_PACKAGE_libsqlite3=m
-          CONFIG_PACKAGE_libunistring=m
-          CONFIG_PACKAGE_libupnp=m
-          CONFIG_PACKAGE_libwxbase=m
-          CONFIG_PACKAGE_libxml2=m
-          CONFIG_PACKAGE_luci-app-acme=m
-          CONFIG_PACKAGE_luci-app-adblock=m
-          CONFIG_PACKAGE_luci-app-advanced-reboot=m
-          CONFIG_PACKAGE_luci-app-ahcp=m
-          CONFIG_PACKAGE_luci-app-airplay2=m
-          CONFIG_PACKAGE_luci-app-aliyundrive-fuse=y
-          CONFIG_PACKAGE_luci-app-aliyundrive-webdav=y
-          CONFIG_PACKAGE_luci-app-amule=m
-          CONFIG_PACKAGE_luci-app-argon-config=m
-          CONFIG_PACKAGE_luci-app-aria2=m
-          CONFIG_PACKAGE_luci-app-docker=y
-          CONFIG_PACKAGE_luci-app-dockerman=y
-          CONFIG_PACKAGE_luci-app-frpc=m
-          CONFIG_PACKAGE_luci-app-frps=m
-          CONFIG_PACKAGE_luci-app-music-remote-center=m
-          CONFIG_PACKAGE_luci-app-netdata=m
-          CONFIG_PACKAGE_luci-app-openvpn=m
-          CONFIG_PACKAGE_luci-app-openvpn-server=m
-          CONFIG_PACKAGE_luci-app-qbittorrent=m
-          CONFIG_PACKAGE_luci-app-qbittorrent-simple=m
-          CONFIG_PACKAGE_luci-app-rclone=y
-          CONFIG_PACKAGE_luci-app-shairplay=m
-          CONFIG_PACKAGE_luci-app-socat=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_IPT2Socks=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_V2ray_Plugin=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
-          CONFIG_PACKAGE_luci-app-transmission=m
-          CONFIG_PACKAGE_luci-app-usb-printer=m
-          CONFIG_PACKAGE_luci-app-webdav=m
-          CONFIG_PACKAGE_luci-compat=y
-          CONFIG_PACKAGE_luci-i18n-acme-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-adblock-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-advanced-reboot-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-ahcp-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-airplay2-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-aliyundrive-fuse-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-aliyundrive-webdav-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-amule-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-argon-config-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-aria2-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-docker-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-dockerman-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-frpc-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-frps-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-music-remote-center-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-netdata-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-openvpn-server-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-openvpn-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-qbittorrent-simple-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-qbittorrent-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-rclone-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-socat-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-transmission-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-usb-printer-zh-cn=m
-          CONFIG_PACKAGE_luci-lib-docker=y
-          CONFIG_PACKAGE_luci-theme-argon=y
-          CONFIG_PACKAGE_luci-theme-argon-mod=y
-          CONFIG_PACKAGE_luci-theme-design=y
-          CONFIG_PACKAGE_luci-theme-material=y
-          CONFIG_PACKAGE_luci-theme-netgear=y
-          CONFIG_PACKAGE_mount-utils=y
+          # CONFIG_PACKAGE_autosamba is not set
+          # CONFIG_PACKAGE_luci-app-diskman is not set
+          # CONFIG_PACKAGE_luci-app-ipsec-vpnd is not set
+          # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng is not set
+          # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui is not set
+          # CONFIG_PACKAGE_luci-app-samba4 is not set
+          # CONFIG_PACKAGE_luci-app-unblockmusic is not set
+          # CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go is not set
+          # CONFIG_PACKAGE_luci-app-wireguard is not set
+          # CONFIG_PACKAGE_luci-app-zerotier is not set
           CONFIG_PACKAGE_msmtp=y
           CONFIG_PACKAGE_mutt=y
-          CONFIG_PACKAGE_mxml=m
-          CONFIG_PACKAGE_netdata=m
-          CONFIG_PACKAGE_openvpn-easy-rsa=m
-          CONFIG_PACKAGE_openvpn-openssl=m
-          CONFIG_PACKAGE_owntone=m
-          CONFIG_PACKAGE_p910nd=m
-          CONFIG_PACKAGE_qBittorrent-static=m
-          CONFIG_PACKAGE_qbittorrent=m
-          CONFIG_PACKAGE_qt5-core=m
-          CONFIG_PACKAGE_qt5-network=m
-          CONFIG_PACKAGE_qt5-sql=m
-          CONFIG_PACKAGE_qt5-xml=m
-          CONFIG_PACKAGE_rblibtorrent=m
-          CONFIG_PACKAGE_rclone=y
-          CONFIG_PACKAGE_rclone-config=y
-          CONFIG_PACKAGE_rclone-ng=y
-          CONFIG_PACKAGE_rclone-webui-react=y
-          CONFIG_PACKAGE_runc=y
-          CONFIG_PACKAGE_shairplay=m
-          CONFIG_PACKAGE_shairport-sync-openssl=m
-          CONFIG_PACKAGE_socat=y
-          CONFIG_PACKAGE_sqlite3-cli=m
-          CONFIG_PACKAGE_tini=y
-          CONFIG_PACKAGE_transmission-daemon-openssl=m
-          CONFIG_PACKAGE_transmission-web-control=m
-          CONFIG_PACKAGE_trojan=y
-          CONFIG_PACKAGE_v2ray-plugin=y
-          CONFIG_SQLITE3_COLUMN_METADATA=y
-          CONFIG_SQLITE3_DYNAMIC_EXTENSIONS=y
-          CONFIG_SQLITE3_FTS3=y
-          CONFIG_SQLITE3_FTS4=y
-          CONFIG_SQLITE3_FTS5=y
-          CONFIG_SQLITE3_JSON1=y
-          CONFIG_SQLITE3_LIBEDIT=y
-          CONFIG_SQLITE3_RTREE=y
-          CONFIG_VHDX_IMAGES=y
-          CONFIG_boost-compile-visibility-hidden=y
-          CONFIG_boost-runtime-shared=y
-          CONFIG_boost-static-and-shared-libs=y
-          CONFIG_boost-variant-release=y
+          # CONFIG_BUSYBOX_CONFIG_FEATURE_IP_LINK is not set
+          # CONFIG_BUSYBOX_CONFIG_IP is not set
+          CONFIG_PACKAGE_UnblockNeteaseMusic-Go=y
+          CONFIG_PACKAGE_attr=y
+          CONFIG_PACKAGE_avahi-dbus-daemon=y
+          CONFIG_PACKAGE_blkid=y
+          CONFIG_PACKAGE_dbus=y
+          CONFIG_PACKAGE_iptables-mod-ipsec=y
+          CONFIG_PACKAGE_kmod-crypto-cbc=y
+          CONFIG_PACKAGE_kmod-crypto-deflate=y
+          CONFIG_PACKAGE_kmod-crypto-des=y
+          CONFIG_PACKAGE_kmod-crypto-echainiv=y
+          CONFIG_PACKAGE_kmod-crypto-hmac=y
+          CONFIG_PACKAGE_kmod-crypto-kpp=y
+          CONFIG_PACKAGE_kmod-crypto-lib-chacha20=y
+          CONFIG_PACKAGE_kmod-crypto-lib-chacha20poly1305=y
+          CONFIG_PACKAGE_kmod-crypto-lib-curve25519=y
+          CONFIG_PACKAGE_kmod-crypto-lib-poly1305=y
+          CONFIG_PACKAGE_kmod-crypto-md5=y
+          # CONFIG_PACKAGE_kmod-ip-vti is not set
+          # CONFIG_PACKAGE_kmod-ip6-vti is not set
+          CONFIG_PACKAGE_kmod-ipsec=y
+          CONFIG_PACKAGE_kmod-ipsec4=y
+          CONFIG_PACKAGE_kmod-ipsec6=y
+          CONFIG_PACKAGE_kmod-ipt-ipsec=y
+          CONFIG_PACKAGE_kmod-iptunnel4=y
+          CONFIG_PACKAGE_kmod-iptunnel6=y
+          CONFIG_PACKAGE_kmod-lib-zlib-deflate=y
+          CONFIG_PACKAGE_kmod-udptunnel4=y
+          CONFIG_PACKAGE_kmod-udptunnel6=y
+          CONFIG_PACKAGE_kmod-wireguard=y
+          # CONFIG_PACKAGE_kmod-xfrm-interface is not set
+          CONFIG_PACKAGE_libattr=y
+          CONFIG_PACKAGE_libavahi-client=y
+          CONFIG_PACKAGE_libavahi-dbus-support=y
+          CONFIG_PACKAGE_libdaemon=y
+          CONFIG_PACKAGE_libdbus=y
+          CONFIG_PACKAGE_libexpat=y
+          CONFIG_PACKAGE_libminiupnpc=y
+          CONFIG_PACKAGE_libnatpmp=y
+          CONFIG_PACKAGE_libparted=y
+          CONFIG_PACKAGE_libpopt=y
+          CONFIG_PACKAGE_libstdcpp=y
+          CONFIG_PACKAGE_libtasn1=y
+          CONFIG_PACKAGE_libtirpc=y
+          CONFIG_PACKAGE_liburing=y
+          CONFIG_PACKAGE_luci-proto-wireguard=y
+          CONFIG_PACKAGE_parted=y
+          CONFIG_PACKAGE_samba4-libs=y
+          CONFIG_PACKAGE_samba4-server=y
+          CONFIG_PACKAGE_smartmontools=y
+          CONFIG_PACKAGE_strongswan=y
+          CONFIG_PACKAGE_strongswan-charon=y
+          # CONFIG_PACKAGE_strongswan-charon-cmd is not set
+          # CONFIG_PACKAGE_strongswan-default is not set
+          CONFIG_PACKAGE_strongswan-ipsec=y
+          # CONFIG_PACKAGE_strongswan-isakmp is not set
+          # CONFIG_PACKAGE_strongswan-libnttfft is not set
+          # CONFIG_PACKAGE_strongswan-libtls is not set
+          CONFIG_PACKAGE_strongswan-minimal=y
+          # CONFIG_PACKAGE_strongswan-mod-addrblock is not set
+          CONFIG_PACKAGE_strongswan-mod-aes=y
+          # CONFIG_PACKAGE_strongswan-mod-af-alg is not set
+          # CONFIG_PACKAGE_strongswan-mod-agent is not set
+          # CONFIG_PACKAGE_strongswan-mod-attr is not set
+          # CONFIG_PACKAGE_strongswan-mod-attr-sql is not set
+          # CONFIG_PACKAGE_strongswan-mod-bliss is not set
+          # CONFIG_PACKAGE_strongswan-mod-blowfish is not set
+          # CONFIG_PACKAGE_strongswan-mod-ccm is not set
+          # CONFIG_PACKAGE_strongswan-mod-chapoly is not set
+          # CONFIG_PACKAGE_strongswan-mod-cmac is not set
+          # CONFIG_PACKAGE_strongswan-mod-connmark is not set
+          # CONFIG_PACKAGE_strongswan-mod-constraints is not set
+          # CONFIG_PACKAGE_strongswan-mod-coupling is not set
+          # CONFIG_PACKAGE_strongswan-mod-ctr is not set
+          # CONFIG_PACKAGE_strongswan-mod-curl is not set
+          # CONFIG_PACKAGE_strongswan-mod-curve25519 is not set
+          # CONFIG_PACKAGE_strongswan-mod-des is not set
+          # CONFIG_PACKAGE_strongswan-mod-dhcp is not set
+          # CONFIG_PACKAGE_strongswan-mod-dnskey is not set
+          # CONFIG_PACKAGE_strongswan-mod-duplicheck is not set
+          # CONFIG_PACKAGE_strongswan-mod-eap-identity is not set
+          # CONFIG_PACKAGE_strongswan-mod-eap-md5 is not set
+          # CONFIG_PACKAGE_strongswan-mod-eap-mschapv2 is not set
+          # CONFIG_PACKAGE_strongswan-mod-eap-radius is not set
+          # CONFIG_PACKAGE_strongswan-mod-eap-tls is not set
+          # CONFIG_PACKAGE_strongswan-mod-farp is not set
+          # CONFIG_PACKAGE_strongswan-mod-fips-prf is not set
+          # CONFIG_PACKAGE_strongswan-mod-forecast is not set
+          # CONFIG_PACKAGE_strongswan-mod-gcm is not set
+          # CONFIG_PACKAGE_strongswan-mod-gcrypt is not set
+          CONFIG_PACKAGE_strongswan-mod-gmp=y
+          # CONFIG_PACKAGE_strongswan-mod-gmpdh is not set
+          # CONFIG_PACKAGE_strongswan-mod-ha is not set
+          CONFIG_PACKAGE_strongswan-mod-hmac=y
+          CONFIG_PACKAGE_strongswan-mod-kernel-libipsec=y
+          CONFIG_PACKAGE_strongswan-mod-kernel-netlink=y
+          # CONFIG_PACKAGE_strongswan-mod-ldap is not set
+          # CONFIG_PACKAGE_strongswan-mod-led is not set
+          # CONFIG_PACKAGE_strongswan-mod-load-tester is not set
+          # CONFIG_PACKAGE_strongswan-mod-md4 is not set
+          # CONFIG_PACKAGE_strongswan-mod-md5 is not set
+          # CONFIG_PACKAGE_strongswan-mod-mgf1 is not set
+          # CONFIG_PACKAGE_strongswan-mod-mysql is not set
+          # CONFIG_PACKAGE_strongswan-mod-newhope is not set
+          CONFIG_PACKAGE_strongswan-mod-nonce=y
+          # CONFIG_PACKAGE_strongswan-mod-ntru is not set
+          # CONFIG_PACKAGE_strongswan-mod-openssl is not set
+          # CONFIG_PACKAGE_strongswan-mod-pem is not set
+          # CONFIG_PACKAGE_strongswan-mod-pgp is not set
+          # CONFIG_PACKAGE_strongswan-mod-pkcs1 is not set
+          # CONFIG_PACKAGE_strongswan-mod-pkcs11 is not set
+          # CONFIG_PACKAGE_strongswan-mod-pkcs12 is not set
+          # CONFIG_PACKAGE_strongswan-mod-pkcs7 is not set
+          # CONFIG_PACKAGE_strongswan-mod-pkcs8 is not set
+          CONFIG_PACKAGE_strongswan-mod-pubkey=y
+          CONFIG_PACKAGE_strongswan-mod-random=y
+          # CONFIG_PACKAGE_strongswan-mod-rc2 is not set
+          # CONFIG_PACKAGE_strongswan-mod-resolve is not set
+          # CONFIG_PACKAGE_strongswan-mod-revocation is not set
+          CONFIG_PACKAGE_strongswan-mod-sha1=y
+          # CONFIG_PACKAGE_strongswan-mod-sha2 is not set
+          # CONFIG_PACKAGE_strongswan-mod-sha3 is not set
+          # CONFIG_PACKAGE_strongswan-mod-smp is not set
+          CONFIG_PACKAGE_strongswan-mod-socket-default=y
+          # CONFIG_PACKAGE_strongswan-mod-socket-dynamic is not set
+          # CONFIG_PACKAGE_strongswan-mod-sql is not set
+          # CONFIG_PACKAGE_strongswan-mod-sqlite is not set
+          # CONFIG_PACKAGE_strongswan-mod-sshkey is not set
+          CONFIG_PACKAGE_strongswan-mod-stroke=y
+          # CONFIG_PACKAGE_strongswan-mod-test-vectors is not set
+          # CONFIG_PACKAGE_strongswan-mod-uci is not set
+          # CONFIG_PACKAGE_strongswan-mod-unity is not set
+          CONFIG_PACKAGE_strongswan-mod-updown=y
+          # CONFIG_PACKAGE_strongswan-mod-vici is not set
+          # CONFIG_PACKAGE_strongswan-mod-whitelist is not set
+          CONFIG_PACKAGE_strongswan-mod-x509=y
+          # CONFIG_PACKAGE_strongswan-mod-xauth-eap is not set
+          CONFIG_PACKAGE_strongswan-mod-xauth-generic=y
+          CONFIG_PACKAGE_strongswan-mod-xcbc=y
+          # CONFIG_PACKAGE_strongswan-pki is not set
+          # CONFIG_PACKAGE_strongswan-scepclient is not set
+          # CONFIG_PACKAGE_strongswan-swanctl is not set
+          CONFIG_PACKAGE_wireguard-tools=y
+          CONFIG_PACKAGE_wsdd2=y
+          # CONFIG_PACKAGE_xfrm is not set
+          CONFIG_PACKAGE_zerotier=y
+          # CONFIG_PARTED_LVM2 is not set
+          CONFIG_PARTED_READLINE=y
+          # CONFIG_SAMBA4_SERVER_AD_DC is not set
+          CONFIG_SAMBA4_SERVER_AVAHI=y
+          CONFIG_SAMBA4_SERVER_NETBIOS=y
+          CONFIG_SAMBA4_SERVER_VFS=y
+          # CONFIG_SAMBA4_SERVER_VFSX is not set
+          CONFIG_SAMBA4_SERVER_WSDD2=y
+          CONFIG_STRONGSWAN_ROUTING_TABLE="220"
+          CONFIG_STRONGSWAN_ROUTING_TABLE_PRIO="220"
+          # CONFIG_ZEROTIER_ENABLE_DEBUG is not set
+          # CONFIG_ZEROTIER_ENABLE_SELFTEST is not set
+
           #
           # ========================固件定制部分结束========================
           #
@@ -315,7 +260,7 @@ jobs:
           # 网络配置信息，将从 zzz-default-settings 文件的第2行开始添加
           sed -i "2i # network config" ./package/lean/default-settings/files/zzz-default-settings
           # 默认 IP 地址，旁路由时不会和主路由的 192.168.1.1 冲突
-          sed -i "3i uci set network.lan.ipaddr='192.168.2.2'" ./package/lean/default-settings/files/zzz-default-settings
+          sed -i "3i uci set network.lan.ipaddr='192.168.2.5'" ./package/lean/default-settings/files/zzz-default-settings
           sed -i "4i uci set network.lan.proto='static'" ./package/lean/default-settings/files/zzz-default-settings # 静态 IP
           sed -i "5i uci set network.lan.type='bridge'" ./package/lean/default-settings/files/zzz-default-settings  # 接口类型：桥接
           sed -i "6i uci set network.lan.ifname='eth0'" ./package/lean/default-settings/files/zzz-default-settings  # 网络端口：默认 eth0，第一个接口
