@@ -164,6 +164,7 @@ jobs:
           CONFIG_PACKAGE_odhcp6c_ext_cer_id=0
           CONFIG_PACKAGE_odhcpd-ipv6only=y
           CONFIG_PACKAGE_odhcpd_ipv6only_ext_cer_id=0
+          CONFIG_PACKAGE_openssh-sftp-server=y
           # CONFIG_PACKAGE_resolveip is not set
           # CONFIG_PACKAGE_samba4-libs is not set
           # CONFIG_PACKAGE_samba4-server is not set
@@ -190,7 +191,7 @@ jobs:
           CONFIG_PACKAGE_luci-lib-fs=y
           CONFIG_PACKAGE_parted=y
           CONFIG_PACKAGE_smartmontools=y
-          CONFIG_PACKAGE_zerotier=y
+          # CONFIG_PACKAGE_zerotier is not set
           # CONFIG_PARTED_LVM2 is not set
           CONFIG_PARTED_READLINE=y
           # CONFIG_ZEROTIER_ENABLE_DEBUG is not set
