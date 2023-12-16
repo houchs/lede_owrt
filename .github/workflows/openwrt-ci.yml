@@ -91,7 +91,9 @@ jobs:
           # CONFIG_PACKAGE_dns2tcp is not set
           CONFIG_PACKAGE_ip6tables=y
           # CONFIG_PACKAGE_iptables-mod-ipsec is not set
+          CONFIG_PACKAGE_iputils-arping=y
           CONFIG_PACKAGE_ipv6helper=y
+          CONFIG_PACKAGE_jq=y
           # CONFIG_PACKAGE_kmod-crypto-cbc is not set
           # CONFIG_PACKAGE_kmod-crypto-deflate is not set
           # CONFIG_PACKAGE_kmod-crypto-des is not set
@@ -127,7 +129,11 @@ jobs:
           # CONFIG_PACKAGE_libudns is not set
           # CONFIG_PACKAGE_liburing is not set
           # CONFIG_PACKAGE_lua-neturl is not set
+          # CONFIG_PACKAGE_luci-app-adbyby-plus is not set
+          # CONFIG_PACKAGE_luci-app-diskman is not set
+          # CONFIG_PACKAGE_luci-app-filetransfer is not set
           # CONFIG_PACKAGE_luci-app-ipsec-vpnd is not set
+          CONFIG_PACKAGE_luci-app-pushbot=y
           # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng is not set
           # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui is not set
           # CONFIG_PACKAGE_luci-app-samba4 is not set
@@ -140,7 +146,13 @@ jobs:
           # CONFIG_PACKAGE_luci-app-unblockmusic is not set
           # CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go is not set
           # CONFIG_PACKAGE_luci-app-vsftpd is not set
+          CONFIG_PACKAGE_luci-app-watchcat=y
           # CONFIG_PACKAGE_luci-app-wireguard is not set
+          CONFIG_PACKAGE_luci-app-wrtbwmon=y
+          # CONFIG_PACKAGE_luci-app-xlnetacc is not set
+          # CONFIG_PACKAGE_luci-app-zerotier is not set
+          CONFIG_PACKAGE_luci-i18n-watchcat-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-wrtbwmon-zh-cn=y
           # CONFIG_PACKAGE_luci-lib-ipkg is not set
           CONFIG_PACKAGE_luci-proto-ipv6=y
           # CONFIG_PACKAGE_luci-proto-wireguard is not set
@@ -165,11 +177,24 @@ jobs:
           # CONFIG_PACKAGE_strongswan is not set
           # CONFIG_PACKAGE_tcping is not set
           # CONFIG_PACKAGE_vsftpd-alt is not set
+          CONFIG_PACKAGE_watchcat=y
           # CONFIG_PACKAGE_wireguard-tools is not set
           # CONFIG_PACKAGE_wsdd2 is not set
           # CONFIG_PACKAGE_xray-core is not set
-          
-
+          CONFIG_PACKAGE_adbyby=y
+          CONFIG_PACKAGE_blkid=y
+          CONFIG_PACKAGE_libminiupnpc=y
+          CONFIG_PACKAGE_libnatpmp=y
+          CONFIG_PACKAGE_libparted=y
+          CONFIG_PACKAGE_libstdcpp=y
+          CONFIG_PACKAGE_luci-lib-fs=y
+          CONFIG_PACKAGE_parted=y
+          CONFIG_PACKAGE_smartmontools=y
+          CONFIG_PACKAGE_zerotier=y
+          # CONFIG_PARTED_LVM2 is not set
+          CONFIG_PARTED_READLINE=y
+          # CONFIG_ZEROTIER_ENABLE_DEBUG is not set
+          # CONFIG_ZEROTIER_ENABLE_SELFTEST is not set
           #
           # ========================固件定制部分结束========================
           #
