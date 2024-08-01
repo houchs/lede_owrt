@@ -14,11 +14,11 @@ name: OpenWrt-CI
 on:
   repository_dispatch:
   workflow_dispatch:
-    #inputs:
-      #ssh:
-        #description: 'SSH connection to Actions'
-        #required: true
-        #default: 'false'
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: true
+        default: 'false'
         
 permissions:
   contents: read
