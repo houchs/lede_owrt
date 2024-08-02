@@ -97,35 +97,111 @@ jobs:
           CONFIG_KERNEL_PERF_EVENTS=y
           CONFIG_KERNEL_TRANSPARENT_HUGEPAGE=y
           CONFIG_KERNEL_TRANSPARENT_HUGEPAGE_ALWAYS=y
+          # CONFIG_PACKAGE_attr is not set
+          # CONFIG_PACKAGE_autosamba is not set
+          # CONFIG_PACKAGE_avahi-dbus-daemon is not set
           CONFIG_PACKAGE_btrfs-progs=y
           CONFIG_PACKAGE_cgroupfs-mount=y
+          # CONFIG_PACKAGE_chinadns-ng is not set
           CONFIG_PACKAGE_containerd=y
+          # CONFIG_PACKAGE_coreutils is not set
+          # CONFIG_PACKAGE_dbus is not set
+          # CONFIG_PACKAGE_dns2socks is not set
+          # CONFIG_PACKAGE_dns2tcp is not set
           CONFIG_PACKAGE_docker=y
           CONFIG_PACKAGE_dockerd=y
-          CONFIG_PACKAGE_fdisk=y
           CONFIG_PACKAGE_ip6tables=y
+          CONFIG_PACKAGE_iputils-arping=y
+          CONFIG_PACKAGE_jq=y
           CONFIG_PACKAGE_kmod-br-netfilter=y
+          CONFIG_PACKAGE_kmod-crypto-acompress=y
           CONFIG_PACKAGE_kmod-dummy=y
           CONFIG_PACKAGE_kmod-fs-btrfs=y
           CONFIG_PACKAGE_kmod-ip6tables=y
           CONFIG_PACKAGE_kmod-ipt-nat6=y
           CONFIG_PACKAGE_kmod-ipt-physdev=y
+          CONFIG_PACKAGE_kmod-lib-lzo=y
           CONFIG_PACKAGE_kmod-lib-raid6=y
           CONFIG_PACKAGE_kmod-lib-xor=y
+          CONFIG_PACKAGE_kmod-lib-zlib-deflate=y
           CONFIG_PACKAGE_kmod-lib-zstd=y
           CONFIG_PACKAGE_kmod-nf-ipt6=y
           CONFIG_PACKAGE_kmod-nf-ipvs=y
           CONFIG_PACKAGE_kmod-nf-log6=y
           CONFIG_PACKAGE_kmod-nf-nat6=y
           CONFIG_PACKAGE_kmod-nf-reject6=y
+          # CONFIG_PACKAGE_kmod-shortcut-fe is not set
+          # CONFIG_PACKAGE_kmod-shortcut-fe-cm is not set
+          # CONFIG_PACKAGE_kmod-tcp-bbr is not set
           CONFIG_PACKAGE_kmod-veth=y
+          # CONFIG_PACKAGE_libavahi-client is not set
+          # CONFIG_PACKAGE_libavahi-dbus-support is not set
+          # CONFIG_PACKAGE_libcares is not set
+          # CONFIG_PACKAGE_libdaemon is not set
+          # CONFIG_PACKAGE_libdbus is not set
+          # CONFIG_PACKAGE_libev is not set
+          # CONFIG_PACKAGE_libexpat is not set
+          # CONFIG_PACKAGE_libgmp is not set
+          # CONFIG_PACKAGE_libgnutls is not set
           CONFIG_PACKAGE_liblzo=y
+          # CONFIG_PACKAGE_libmbedtls is not set
+          # CONFIG_PACKAGE_libnettle is not set
+          # CONFIG_PACKAGE_libpcre2 is not set
+          # CONFIG_PACKAGE_libpopt is not set
           CONFIG_PACKAGE_libseccomp=y
-          CONFIG_PACKAGE_luci-app-docker=y
-          CONFIG_PACKAGE_luci-i18n-docker-zh-cn=y
+          # CONFIG_PACKAGE_libsodium is not set
+          # CONFIG_PACKAGE_libtasn1 is not set
+          # CONFIG_PACKAGE_libtirpc is not set
+          # CONFIG_PACKAGE_libudns is not set
+          # CONFIG_PACKAGE_liburing is not set
+          CONFIG_PACKAGE_libuv=y
+          CONFIG_PACKAGE_libwebsockets-full=y
+          # CONFIG_PACKAGE_lua-neturl is not set
+          CONFIG_PACKAGE_luci-app-dockerman=y
+          # CONFIG_PACKAGE_luci-app-filetransfer is not set
+          CONFIG_PACKAGE_luci-app-pushbot=y
+          # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng is not set
+          # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui is not set
+          # CONFIG_PACKAGE_luci-app-samba4 is not set
+          # CONFIG_PACKAGE_luci-app-ssr-plus is not set
+          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client is not set
+          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Server is not set
+          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Simple_Obfs is not set
+          # CONFIG_PACKAGE_luci-app-turboacc is not set
+          # CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_BBR_CCA is not set
+          # CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_PDNSD is not set
+          # CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_SHORTCUT_FE_CM is not set
+          # CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go is not set
+          # CONFIG_PACKAGE_luci-app-vsftpd is not set
+          CONFIG_PACKAGE_luci-app-watchcat=y
+          CONFIG_PACKAGE_luci-i18n-dockerman-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-watchcat-zh-cn=y
+          CONFIG_PACKAGE_luci-lib-docker=y
+          # CONFIG_PACKAGE_luci-lib-fs is not set
+          # CONFIG_PACKAGE_luci-lib-ipkg is not set
+          # CONFIG_PACKAGE_microsocks is not set
+          # CONFIG_PACKAGE_mosdns is not set
           CONFIG_PACKAGE_mount-utils=y
+          # CONFIG_PACKAGE_pdnsd-alt is not set
+          # CONFIG_PACKAGE_resolveip is not set
           CONFIG_PACKAGE_runc=y
+          # CONFIG_PACKAGE_samba4-libs is not set
+          # CONFIG_PACKAGE_samba4-server is not set
+          # CONFIG_PACKAGE_shadowsocks-libev-ss-server is not set
+          # CONFIG_PACKAGE_shadowsocks-rust-sslocal is not set
+          # CONFIG_PACKAGE_shadowsocksr-libev-ssr-check is not set
+          # CONFIG_PACKAGE_shadowsocksr-libev-ssr-local is not set
+          # CONFIG_PACKAGE_shadowsocksr-libev-ssr-redir is not set
+          # CONFIG_PACKAGE_shadowsocksr-libev-ssr-server is not set
+          # CONFIG_PACKAGE_simple-obfs-client is not set
+          # CONFIG_PACKAGE_tcping is not set
           CONFIG_PACKAGE_tini=y
+          CONFIG_PACKAGE_ttyd=y
+          # CONFIG_PACKAGE_vsftpd-alt is not set
+          CONFIG_PACKAGE_watchcat=y
+          # CONFIG_PACKAGE_wsdd2 is not set
+          # CONFIG_PACKAGE_xray-core is not set
+
           #
           # ========================固件定制部分结束========================
           #
