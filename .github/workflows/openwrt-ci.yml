@@ -100,6 +100,7 @@ jobs:
           # CONFIG_PACKAGE_attr is not set
           # CONFIG_PACKAGE_autosamba is not set
           # CONFIG_PACKAGE_avahi-dbus-daemon is not set
+          CONFIG_PACKAGE_blkid=y
           CONFIG_PACKAGE_btrfs-progs=y
           CONFIG_PACKAGE_cgroupfs-mount=y
           # CONFIG_PACKAGE_chinadns-ng is not set
@@ -111,8 +112,6 @@ jobs:
           CONFIG_PACKAGE_docker=y
           CONFIG_PACKAGE_dockerd=y
           CONFIG_PACKAGE_ip6tables=y
-          CONFIG_PACKAGE_iputils-arping=y
-          CONFIG_PACKAGE_jq=y
           CONFIG_PACKAGE_kmod-br-netfilter=y
           CONFIG_PACKAGE_kmod-crypto-acompress=y
           CONFIG_PACKAGE_kmod-dummy=y
@@ -146,10 +145,12 @@ jobs:
           CONFIG_PACKAGE_liblzo=y
           # CONFIG_PACKAGE_libmbedtls is not set
           # CONFIG_PACKAGE_libnettle is not set
+          CONFIG_PACKAGE_libparted=y
           # CONFIG_PACKAGE_libpcre2 is not set
           # CONFIG_PACKAGE_libpopt is not set
           CONFIG_PACKAGE_libseccomp=y
           # CONFIG_PACKAGE_libsodium is not set
+          CONFIG_PACKAGE_libstdcpp=y
           # CONFIG_PACKAGE_libtasn1 is not set
           # CONFIG_PACKAGE_libtirpc is not set
           # CONFIG_PACKAGE_libudns is not set
@@ -157,13 +158,15 @@ jobs:
           CONFIG_PACKAGE_libuv=y
           CONFIG_PACKAGE_libwebsockets-full=y
           # CONFIG_PACKAGE_lua-neturl is not set
+          CONFIG_PACKAGE_luci-app-diskman=y
           CONFIG_PACKAGE_luci-app-dockerman=y
           # CONFIG_PACKAGE_luci-app-filetransfer is not set
-          CONFIG_PACKAGE_luci-app-pushbot=y
           # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng is not set
           # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui is not set
           # CONFIG_PACKAGE_luci-app-samba4 is not set
           # CONFIG_PACKAGE_luci-app-ssr-plus is not set
+          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ChinaDNS_NG is not set
+          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_MosDNS is not set
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client is not set
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Server is not set
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Simple_Obfs is not set
@@ -173,15 +176,17 @@ jobs:
           # CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_SHORTCUT_FE_CM is not set
           # CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go is not set
           # CONFIG_PACKAGE_luci-app-vsftpd is not set
-          CONFIG_PACKAGE_luci-app-watchcat=y
+          CONFIG_PACKAGE_luci-app-wrtbwmon=y
+          CONFIG_PACKAGE_luci-i18n-diskman-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-dockerman-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-watchcat-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-wrtbwmon-zh-cn=y
           CONFIG_PACKAGE_luci-lib-docker=y
           # CONFIG_PACKAGE_luci-lib-fs is not set
           # CONFIG_PACKAGE_luci-lib-ipkg is not set
           # CONFIG_PACKAGE_microsocks is not set
           # CONFIG_PACKAGE_mosdns is not set
           CONFIG_PACKAGE_mount-utils=y
+          CONFIG_PACKAGE_parted=y
           # CONFIG_PACKAGE_pdnsd-alt is not set
           # CONFIG_PACKAGE_resolveip is not set
           CONFIG_PACKAGE_runc=y
@@ -194,13 +199,15 @@ jobs:
           # CONFIG_PACKAGE_shadowsocksr-libev-ssr-redir is not set
           # CONFIG_PACKAGE_shadowsocksr-libev-ssr-server is not set
           # CONFIG_PACKAGE_simple-obfs-client is not set
+          CONFIG_PACKAGE_smartmontools=y
           # CONFIG_PACKAGE_tcping is not set
           CONFIG_PACKAGE_tini=y
           CONFIG_PACKAGE_ttyd=y
           # CONFIG_PACKAGE_vsftpd-alt is not set
-          CONFIG_PACKAGE_watchcat=y
           # CONFIG_PACKAGE_wsdd2 is not set
           # CONFIG_PACKAGE_xray-core is not set
+          CONFIG_PARTED_READLINE=y
+
 
           #
           # ========================固件定制部分结束========================
